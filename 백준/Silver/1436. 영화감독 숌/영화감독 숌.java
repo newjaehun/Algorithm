@@ -6,20 +6,13 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int count =0;
-        int result = 666;
-
-        while(count!=n){
-            if((result+"").contains("666")){
-                count++;
+        int result =665;
+        for (int i = 0; i < n; i++)
+            while (true) {
+                result++;
+                if (String.valueOf(result).contains("666"))
+                    break;
             }
-            result++;
-            
-        }
-        
-        
-        System.out.println(result-1);
-        br.close();
+        System.out.println(result);
     }
-    
 }
