@@ -9,8 +9,11 @@ public class Main {
             int n = Integer.parseInt(br.readLine());
             String s = br.readLine();
             long result = 0;
-            for (int i = 0; i < n; i++)
-                result += ((s.charAt(i) - 96) * Math.pow(31,i));
+            long r = 1;
+            for (int i = 0; i < n; i++) {
+                result += ((s.charAt(i) - 96) * r);
+                r = (r*31)%M;
+            }
             System.out.println(result%M);
         }
     }
